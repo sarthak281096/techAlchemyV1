@@ -1,0 +1,31 @@
+{
+    "mysql": {
+        "read": {
+            "url": "",
+            "port": "",
+            "user": "",
+            "password": "",
+            "database": "",
+            "connectionLimit": ""
+        },
+        "write": {
+            "url": "",
+            "port": "",
+            "user": "",
+            "password": "",
+            "database": "",
+            "connectionLimit": ""
+        }
+    },
+    "newsapi": {
+        "endpoint": "",
+        "apikey": "",
+        "pagesize": 1,
+        "country": ""
+    },
+    "weatherapi": {
+        "endpoint": "",
+        "apikey": "",
+        "city": ""
+    }
+}
