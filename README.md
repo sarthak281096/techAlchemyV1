@@ -31,7 +31,6 @@ TechAlchemy uses a number of open projects to work properly:
 - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) - An implementation of JSON Web Tokens.
 - [mysql2](https://www.npmjs.com/package/mysql2) - MySQL client for Node.js with focus on performance
 
-Source code is uploaded to public [GitHub repository](https://github.com/sarthak281096/techAlchemy)
 
 
 ## Installation
