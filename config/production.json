@@ -1,0 +1,31 @@
+{
+    "mysql": {
+        "read": {
+            "url": "127.0.0.1",
+            "port": "3306",
+            "user": "app-user",
+            "password": "root",
+            "database": "techAlchemy",
+            "connectionLimit": 15
+        },
+        "write": {
+            "url": "127.0.0.1",
+            "port": "3306",
+            "user": "app-user",
+            "password": "root",
+            "database": "techAlchemy",
+            "connectionLimit": 15
+        }
+    },
+    "newsapi": {
+        "endpoint": "https://newsapi.org/v2/top-headlines",
+        "apikey": "1fd12693f6d04764a1ce708a7d86b925",
+        "pagesize": 2,
+        "country": "in"
+    },
+    "weatherapi": {
+        "endpoint": "api.openweathermap.org/data/2.5/forecast",
+        "apikey": "c8301e7163ceac495e84071441e797e7",
+        "city": "Bangalore"
+    }
+}
