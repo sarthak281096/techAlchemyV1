@@ -104,3 +104,5 @@ process.on('SIGINT', function() {
   console.log('gotta exit - SIGINT');
   process.exit(0);
 });
+
+module.exports = app;

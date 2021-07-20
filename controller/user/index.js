@@ -12,9 +12,9 @@ const redis = require("redis");
 const client = redis.createClient();
 
 var post = function(req, res) {
+    let data = req.body;
     try{
         logger.debug('Inside post function of createUser');
-        let data = req.body;
         const isRequestValid = validate(data, postSchema, logger);
         if (!isRequestValid.valid) {
             logger.error(isRequestValid);
@@ -45,7 +45,7 @@ var post = function(req, res) {
         })
         })
         .catch((error)=>{
-            logger.error('Error from database', error)
+            logger.error('Error from database', error.toString())
             let err = errorHandler(500,
                 "Exception caught",
                 data, JSON.stringify(req.headers), error.stack
@@ -54,7 +54,7 @@ var post = function(req, res) {
         })
 
     } catch(error) {
-        logger.error(error.stack);
+        logger.error(error);
         let err = errorHandler(500,
             "Exception caught",
             data, JSON.stringify(req.headers), error.stack
@@ -65,9 +65,9 @@ var post = function(req, res) {
 
 
 var postLogin = function(req, res) {
+    let data = req.body;
     try{
         logger.debug('Inside postLogin function of createUser');
-        let data = req.body;
         const isRequestValid = validate(data, postLoginSchema, logger);
         if (!isRequestValid.valid) {
             logger.error(isRequestValid);
@@ -132,6 +132,7 @@ var postLogin = function(req, res) {
 }
 
 var postLogout = function(req, res) {
+    let data = req.body;
     try{
         logger.debug('Inside postLogin function of createUser');
         const token =req.header('auth-token');

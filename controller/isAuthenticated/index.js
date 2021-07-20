@@ -35,7 +35,7 @@ var isAuthenticated = function(req, res, next) {
         }
         
     } catch(error) {
-        logger.error(error.stack);
+        logger.error(error.toString());
         let err = errorHandler(400,
             "Invalid Token ",
             req.body, JSON.stringify(req.headers), error.stack

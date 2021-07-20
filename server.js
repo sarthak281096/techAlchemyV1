@@ -4,7 +4,7 @@ const os = require('os');
 if (cluster.isMaster) {
     const cpus = os.cpus().length;
 
-    console.log(`Starting covid-app on ${cpus} CPUs`)
+    console.log(`Starting techAlchemy app on ${cpus} CPUs`)
     for (let i = 0; i < cpus; i++) {
         cluster.fork();
     }
